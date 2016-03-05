@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 332159637
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9284a566b44341f2a74cf3976abc4d37
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e6d74f2d6b370c4d26f3cae461538e43
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Maelstrom Assets/Characters/Elemental/Elemental.obj
+- Assets/Maelstrom Assets/Characters/Human Worker/Human Worker.obj
+- Assets/Maelstrom Assets/Characters/Human Ranged/Human Ranged.obj
+- Assets/Maelstrom Assets/Characters/Human Caster/Human Caster.obj
+- Assets/Maelstrom Assets/Characters/Human Tank/Human Tank.obj
+Dependencies: []

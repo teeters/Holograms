@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 3497110788
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: db039fee47bcd614e61a1f9f19219af6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e6d74f2d6b370c4d26f3cae461538e43
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Maelstrom Assets/Characters/Human Stealth/HumanStealth.prefab
+Dependencies: []

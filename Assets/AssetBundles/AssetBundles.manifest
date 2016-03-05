@@ -1,0 +1,9 @@
+ManifestFileVersion: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: adventure1
+      Dependencies: {}
+    Info_1:
+      Name: humanstealth
+      Dependencies: {}
