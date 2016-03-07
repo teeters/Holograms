@@ -37,3 +37,9 @@ HologramViewer-iOS/
 
 #Other:
 target-metadata/
+AssetBundles
+Assets/AssetBundles
+AssetBundleManager.meta
+Character Prefabs.meta
+Assets/AssetBundleManager
+Assets/Character Prefabs

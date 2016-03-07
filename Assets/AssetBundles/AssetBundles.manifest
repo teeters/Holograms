@@ -7,3 +7,6 @@ AssetBundleManifest:
     Info_1:
       Name: humanstealth
       Dependencies: {}
+    Info_2:
+      Name: earth
+      Dependencies: {}

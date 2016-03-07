@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3497110788
+CRC: 1070237360
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: db039fee47bcd614e61a1f9f19219af6
+    Hash: e980e6b4f2b129be2cb0b7b384c73f41
   TypeTreeHash:
     serializedVersion: 2
     Hash: e6d74f2d6b370c4d26f3cae461538e43
@@ -26,5 +26,5 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Maelstrom Assets/Characters/Human Stealth/HumanStealth.prefab
+- Assets/Character Prefabs/Human Stealth/HumanStealth.prefab
 Dependencies: []

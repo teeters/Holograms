@@ -8,7 +8,6 @@ public class CloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 	public string username;
 	private CloudRecoBehaviour mCloudRecoBehaviour;
 	private string mTargetMetadata;
-	public int version;
 	public string BaseURL; //should point to the folder on your server where users' models are stored
 
 	// Use this for initialization
@@ -52,7 +51,7 @@ public class CloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 
 		// load assetbundle based on metadata
 		mTargetMetadata = targetSearchResult.MetaData;
-		StartCoroutine(DownloadAndCache (username, mTargetMetadata));
+		StartCoroutine(Download(username, mTargetMetadata));
 
 			// Build augmentation based on target
 		if (ImageTargetTemplate) {
@@ -67,12 +66,7 @@ public class CloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 	}
 
 	//modified example code to download assetbundle
-	IEnumerator DownloadAndCache (string username, string modelName){
-		// Wait for the Caching system to be ready
-		while (!Caching.ready) {
-			Debug.Log ("Waiting on caching");
-			yield return null;
-		}
+	IEnumerator Download(string username, string modelName){
 
 		//Compute request url for server
 		//string BundleURL = BaseURL + "/" + username + "/" + modelName;
@@ -80,26 +74,21 @@ public class CloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 		UriBuilder uriBuilder = new UriBuilder();
 		uriBuilder.Scheme = "http";
 		uriBuilder.Host = BaseURL;
-		uriBuilder.Path = "getHologram.php";
-		uriBuilder.Port = 80;
-		uriBuilder.Query = "username="+username+"&modelFileName="+modelName;
+		uriBuilder.Path = username.Trim() + "/" + modelName.Trim();
 		string BundleURL = uriBuilder.ToString ();
 		Debug.Log ("Attempting to download " + BundleURL);
 
-		// Load the AssetBundle file from Cache if it exists with the same version or download and store it in the cache
-		using(WWW www = WWW.LoadFromCacheOrDownload (BundleURL, version)){
+		// Download desired assetbundle
+		using (WWW www = new WWW(BundleURL)) {
 			yield return www;
-			if (www.error != null) {
-				Debug.Log ("Download error");
-				throw new Exception ("WWW download had an error:" + www.error);
-			}
+			if (www.error != null)
+				throw new Exception("WWW download had an error:" + www.error);
 			AssetBundle bundle = www.assetBundle;
 			Debug.Log ("Got assets "+string.Join(",", bundle.GetAllAssetNames ()));
 			GameObject loadedModel = Instantiate(bundle.LoadAllAssets()[0]) as GameObject;
 		
 			//attach to the image target
 			loadedModel.transform.parent = ImageTargetTemplate.gameObject.transform;
-			loadedModel.transform.position = new Vector3 (0, 0, 0);
 			loadedModel.transform.localScale = new Vector3 (1, 1, 1);
 
 			// Unload the AssetBundles compressed contents to conserve memory

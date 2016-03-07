@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 332159637
+CRC: 2635526111
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9284a566b44341f2a74cf3976abc4d37
+    Hash: e00f61d65acb7fa4398ab0f0ef169a8e
   TypeTreeHash:
     serializedVersion: 2
     Hash: e6d74f2d6b370c4d26f3cae461538e43
@@ -26,9 +26,8 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Maelstrom Assets/Characters/Elemental/Elemental.obj
-- Assets/Maelstrom Assets/Characters/Human Worker/Human Worker.obj
-- Assets/Maelstrom Assets/Characters/Human Ranged/Human Ranged.obj
-- Assets/Maelstrom Assets/Characters/Human Caster/Human Caster.obj
-- Assets/Maelstrom Assets/Characters/Human Tank/Human Tank.obj
+- Assets/Character Prefabs/Human Worker/Human Worker.obj
+- Assets/Character Prefabs/Human Ranged/Human Ranged.obj
+- Assets/Character Prefabs/Human Caster/Human Caster.obj
+- Assets/Character Prefabs/Human Tank/Human Tank.obj
 Dependencies: []
