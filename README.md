@@ -4,6 +4,7 @@ cloud reco system and dynamically loads 3d enhancements from a webserver.
 
 # Installation
 In order to build Holograms for the iPhone you will need 3 things:
+
 1. Unity version 5.3.0. IMPORTANT: The Vuforia library is not compatible with higher versions of Unity, 
 so do not get the latest. Download [here](https://unity3d.com/get-unity/download/archive)
 2. A Mac with XCode (and an iPhone).
@@ -16,6 +17,7 @@ When you install Unity, it should create a directory in your home folder called 
 When you clone the source code, you should place it under the Unity directory.
 
 After downloading, you will need to make a few configuration changes in Unity to prepare the project for deployment to iOS.
+
 1. In the Assets folder, open the file viewHologram.unity. This will take you to the main development scene for the app.
 2. You should see an empty-looking scene in Unity with some objects in the Hierarchy window: A Cloud Reco object, an ARCamera
 object, and an ImageTarget object.
@@ -37,6 +39,7 @@ Building the project should take a while. Grab a Coke and come back. When Unity 
 in your project folder that contains the auto-generated XCode project. Select the Unity-iPhone.xcodeproj file and open it up in XCode.
 
 There are just a few more things to take care of before the project can be deployed.
+
 1. In the navigator window, select the project file at the very top. 
 2. In the general window, select your code signing identity for the app. XCode can help create one for you if you don't have one.
 3. Under the Build Settings tab, scroll down until you see a line that says Resealse: DWARF with dSYM file. Change it to just,
